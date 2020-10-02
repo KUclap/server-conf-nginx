@@ -3,7 +3,7 @@ name: Deploy-to-Gandalf-Production
 on:
   push:
     branches:
-      - gandalf-release-no
+      - release
 
 jobs:
   build:
