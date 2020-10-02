@@ -3,7 +3,7 @@ name: Deploy-to-Gandalf-Production
 on:
   push:
     branches:
-      - release
+      - release-gandalf
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
           registry: docker.pkg.github.com
           username: ${{ secrets.GIT_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: ./docker/Nginx.Dockerfile
+          dockerfile: ./sv1-gandalf/docker/Nginx.Dockerfile
           tags: latest
       - name: Deploy package to digitalocean
         uses: appleboy/ssh-action@master
