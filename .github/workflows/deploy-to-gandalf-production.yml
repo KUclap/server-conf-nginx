@@ -13,7 +13,7 @@ jobs:
       - name: Nginx - Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: kuclap/kuclap/kuclap-nginx
+          name: kuclap/server-conf-nginx/kuclap-gandalf-nginx
           registry: docker.pkg.github.com
           username: ${{ secrets.GIT_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
@@ -35,5 +35,5 @@ jobs:
             docker container prune -f 
             docker image prune -f
             docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-            docker pull docker.pkg.github.com/kuclap/kuclap/kuclap-nginx:latest
-            docker run --name kuclap-nginx --network=kuclap --restart=always -v /srv/kuclap.com:/srv/kuclap.com -dit -p 443:443 -p 80:80 docker.pkg.github.com/kuclap/kuclap/kuclap-nginx:1.0.0
+            docker pull docker.pkg.github.com/kuclap/server-conf-nginx/kuclap-gandalf-nginx:latest
+            docker run --name kuclap-nginx --network=kuclap --restart=always -v /srv/kuclap.com:/srv/kuclap.com -dit -p 443:443 -p 80:80 docker.pkg.github.com/kuclap/server-conf-nginx/kuclap-gandalf-nginx:latest
