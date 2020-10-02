@@ -36,4 +36,4 @@ jobs:
             docker image prune -f
             docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
             docker pull docker.pkg.github.com/kuclap/server-conf-nginx/kuclap-gandalf-nginx:latest
-            docker run --name kuclap-nginx --network=kuclap --restart=always -v /srv/kuclap.com:/srv/kuclap.com -dit -p 443:443 -p 80:80 docker.pkg.github.com/kuclap/server-conf-nginx/kuclap-gandalf-nginx:latest
+            docker run --name kuclap-gandalf-nginx --network=kuclap --restart=always -v /srv/kuclap.com:/srv/kuclap.com -dit -p 443:443 -p 80:80 docker.pkg.github.com/kuclap/server-conf-nginx/kuclap-gandalf-nginx:latest
