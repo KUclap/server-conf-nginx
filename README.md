@@ -1,5 +1,7 @@
-## server-conf-nginx
+## Server-conf-nginx
 
 #### Digital Ocean (Droplet)
 
-- sv1-gandalf
+| Server name | Deploy branch   | folder      |
+| ----------- | --------------- | ----------- |
+| sv1-gandalf | release-gandalf | sv1-gandalf |
